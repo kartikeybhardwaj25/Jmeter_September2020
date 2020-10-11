@@ -1,0 +1,169 @@
+- Selenium
+- Distributed Environment
+- Perfmon
+- Plugin
+- Pacing
+- Functions
+
+Perfmon download
+
+https://jmeter-plugins.org/wiki/PerfMon/
+
+
+Jmeter Plugin
+https://jmeter-plugins.org/wiki/PluginsManager/
+
+
+Server Agent
+--on server
+
+
+
+
+
+
+
+Adding plugin manager in Jmeter
+
+
+
+
+Prerequisites for jmeter - Selenium Integration
+
+- Add jmeter webdriver plugin
+
+
+
+
+Distributed testing using Jmeter
+
+why?
+
+1) To simulate user jmeter client machine
+2) Client machine may not be able to handle such a huge load
+
+
+
+
+
+Prerequisites
+
+- master and slave should have similar version of jmeter installed
+- master and slave machine should have same version of java installed
+- master and slave must connect to each other through same subnet
+
+
+
+Configuration:
+
+Step 1; update jmeter properties in jmeter bin folder in master machine and update remote_hosts with ip address of slave machines
+
+Step 2: perform creation of keyStore for authentication
+create-rmi-keystore
+
+Step 3: rmi_keystore.jks gets generated after filling up keystore form
+
+Step 4; Copy rmi_keystore.jks in bin folder of jmeter in slave machine   //helps in authentication
+
+Step 5; launch jmeter server in server machine where application is hosted
+
+Step 6: Goto run-->remore run
+
+
+
+slave 1---> 500 user
+slave 2---> 300 user
+slave 3---->200 user
+
+
+
+
+
+
+Perfmon is a third party app
+- used to monitor the health of the server
+- used for client server architecture
+-  server is a machine where application is hosted
+
+
+Parameters
+- CPU usage
+- memory
+- Disk i/o
+
+
+
+
+Configuration of jmeter with Perfmon
+
+- Plugin manager and add perfom jar
+
+or
+
+- Download perfmon plugin from below mentioned site
+https://jmeter-plugins.org/wiki/PerfMon/
+
+
+- Add the jar files in respective locations lib or ext
+- restart jmeter
+- install server agent on server where application is hosted 
+
+
+
+
+
+Command line for jmeter execution
+
+
+
+jmeter -n -t <location of .jmx file> -l<location of result>
+
+
+
+
+Pacing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

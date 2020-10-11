@@ -1,0 +1,29 @@
+session id;
+
+
+
+
+1) Record relevent steps
+2) Import .jmx file in jmeter
+3) Clean up non relevent requests/samples
+
+
+
+
+use case; pass dynamic token id generated during login to all the requests where authen tication is required
+
+
+X-Request-Id: afd40290-8a2f-451d-8143-6893a44413da
+
+
+
+
+
+
+
+http://api.openweathermap.org/data/2.5/weather?q=kolkata&appid=73d0deea7b4d063fb9e69b837acc4d84
+
+
+
+
+
